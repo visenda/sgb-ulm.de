@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+  --font-display: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white text-brand-950 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-brand-950;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-500 ring-offset-2 ring-offset-white;
+  }
+
+  ::selection {
+    @apply bg-accent-200 text-brand-950;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply container mx-auto px-5 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent-600;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200 focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-700 text-white shadow-soft hover:bg-brand-800 hover:shadow-card;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-500 text-white shadow-soft hover:bg-accent-600;
+  }
+
+  .btn-outline {
+    @apply btn border border-brand-200 bg-white text-brand-800 hover:border-brand-700 hover:bg-brand-50;
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/40 text-white hover:bg-white/10;
+  }
+
+  .card {
+    @apply rounded-3xl border border-brand-100 bg-white p-6 shadow-card transition duration-300 md:p-8;
+  }
+
+  .prose-de {
+    @apply max-w-none text-[1.0625rem] leading-relaxed text-brand-900/80;
+  }
+
+  .prose-de h2 {
+    @apply mt-12 mb-4 text-2xl font-bold md:text-3xl;
+  }
+
+  .prose-de h3 {
+    @apply mt-8 mb-3 text-xl font-semibold;
+  }
+
+  .prose-de p {
+    @apply mb-5;
+  }
+
+  .prose-de ul {
+    @apply mb-5 list-disc space-y-2 pl-5;
+  }
+
+  .prose-de a {
+    @apply font-medium text-brand-700 underline underline-offset-2 hover:text-brand-900;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-brand-900;
+  }
+
+  .field-input {
+    @apply w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm text-brand-950 placeholder:text-brand-900/40 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20;
+  }
+
+  .field-error {
+    @apply mt-1.5 text-xs font-medium text-red-600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
