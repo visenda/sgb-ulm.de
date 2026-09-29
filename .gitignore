@@ -1,0 +1,32 @@
+# Abhängigkeiten
+/node_modules
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Produktion
+/build
+
+# Umgebung
+.env
+.env*.local
+
+# Betriebssystem
+.DS_Store
+*.pem
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Lokaler OpenHands-Gesprächsspeicher (kein Projektcode)
+/conversations/
