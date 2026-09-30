@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/config/site";
+import { mailHref, site } from "@/config/site";
 import { PageHero, Section } from "@/components/Ui";
 
 export const metadata: Metadata = {
@@ -23,10 +23,12 @@ export default function ImpressumPage() {
       <Section className="bg-white">
         <div className="prose-de max-w-3xl">
           <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
-            <strong>Hinweis für die Veröffentlichung:</strong> Die folgenden
-            Angaben sind Platzhalter (Musterangaben). Sie müssen vor dem Livegang
-            durch die tatsächlichen Unternehmensdaten ersetzt werden. Alle Werte
-            lassen sich zentral in <code>config/site.ts</code> anpassen.
+            <strong>Hinweis für die Veröffentlichung:</strong> Anschrift, Telefon
+            und E-Mail sind hinterlegt. Die Angaben zu Vertretungsberechtigtem,
+            Registereintrag und Umsatzsteuer-Identifikationsnummer sind noch
+            Platzhalter (Musterangaben) und müssen vor dem Livegang ersetzt
+            werden. Alle Werte lassen sich zentral in{" "}
+            <code>config/site.ts</code> anpassen.
           </div>
 
           <h2>Anbieter</h2>
@@ -48,7 +50,7 @@ export default function ImpressumPage() {
             Telefon: {site.contact.phone}
             <br />
             E-Mail:{" "}
-            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+            <a href={mailHref}>{site.contact.email}</a>
           </p>
 
           <h2>Registereintrag</h2>

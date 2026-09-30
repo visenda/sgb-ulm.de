@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/config/site";
+import { mailHref, site, telHref } from "@/config/site";
 import ContactForm from "@/components/ContactForm";
 import { PageHero, Section, SectionHeading } from "@/components/Ui";
 import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "@/components/Icons";
@@ -53,7 +53,7 @@ export default function KontaktPage() {
                 <div>
                   <p className="font-semibold">Telefon</p>
                   <a
-                    href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                    href={telHref}
                     className="text-accent-900/70 hover:text-brand-700"
                   >
                     {site.contact.phoneDisplay}
@@ -67,7 +67,7 @@ export default function KontaktPage() {
                 <div>
                   <p className="font-semibold">E-Mail</p>
                   <a
-                    href={`mailto:${site.contact.email}`}
+                    href={mailHref}
                     className="text-accent-900/70 hover:text-brand-700"
                   >
                     {site.contact.email}

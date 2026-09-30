@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { nav, site } from "@/config/site";
+import { nav, site, telHref } from "@/config/site";
 import { services } from "@/config/services";
 import { CloseIcon, MenuIcon, PhoneIcon, ChevronDownIcon } from "./Icons";
 
@@ -37,7 +37,7 @@ export default function Header() {
             gründlich, planbar.
           </p>
           <a
-            href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+            href={telHref}
             className="inline-flex items-center gap-2 font-semibold text-white hover:text-brand-300"
           >
             <PhoneIcon className="h-3.5 w-3.5" />
@@ -118,10 +118,27 @@ export default function Header() {
               </Link>
             ),
           )}
+          <a
+            href={telHref}
+            className="ml-2 inline-flex items-center gap-2 rounded-full border border-brand-200 px-4 py-2 text-sm font-semibold text-accent-800 transition hover:border-brand-400 hover:bg-brand-50"
+            aria-label={`Jetzt anrufen: ${site.contact.phoneDisplay}`}
+          >
+            <PhoneIcon className="h-4 w-4" />
+            <span className="hidden xl:inline">Jetzt anrufen</span>
+          </a>
           <Link href="/kontakt#anfrage" className="btn-primary ml-2">
             Angebot anfragen
           </Link>
         </nav>
+
+        <a
+          href={telHref}
+          className="inline-flex h-11 items-center gap-2 rounded-xl bg-brand-400 px-4 text-sm font-semibold text-accent-950 lg:hidden"
+          aria-label={`Jetzt anrufen: ${site.contact.phoneDisplay}`}
+        >
+          <PhoneIcon className="h-5 w-5" />
+          <span className="hidden sm:inline">Anrufen</span>
+        </a>
 
         <button
           type="button"
@@ -165,7 +182,7 @@ export default function Header() {
               Angebot anfragen
             </Link>
             <a
-              href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+              href={telHref}
               className="btn-outline mt-1"
             >
               <PhoneIcon className="h-4 w-4" />

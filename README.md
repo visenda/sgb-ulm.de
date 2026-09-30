@@ -41,9 +41,26 @@ Der Server läuft anschließend unter <http://localhost:8012>.
 Alle Unternehmens- und Rechtsangaben liegen zentral in `config/site.ts`
 (Adresse, Telefon, E-Mail, USt-IdNr., Geschäftsführung usw.).
 
-> **Wichtig:** Die dort mit `MUSTER` markierten Werte sind Platzhalter und
-> müssen vor dem Livegang durch die echten Daten ersetzt werden. Das gilt
-> insbesondere für das Impressum (Pflichtangaben nach § 5 DDG).
+Die Anschrift, Telefonnummer und E-Mail-Adresse sind hinterlegt. Unter
+`site.legal` stehen noch **Platzhalter** für Vertretungsberechtigten,
+Registereintrag und USt-IdNr. – diese müssen vor dem Livegang ersetzt werden
+(Pflichtangaben nach § 5 DDG).
+
+Für Anruf-Links nicht selbst `tel:` bauen: `telHref` aus `config/site.ts`
+verwenden (E.164-Format, ein Tap zum Anrufen). Für E-Mail `mailHref`.
+
+## Direkt anrufen
+
+Damit die Telefonnummer auf dem Smartphone mit einem Tap wählbar ist:
+
+- **Header:** Anrufbutton (Desktop ab `xl` mit Label, mobil als Icon-Button).
+- **Mobiler Aktionsbalken** (`components/MobileCallBar.tsx`): fest am unteren
+  Rand unterhalb von `lg`, mit „Jetzt anrufen“ und „Angebot anfragen“.
+- Telefonnummern im Footer, auf der Kontaktseite, im CTA-Block und auf der
+  Startseite sind ebenfalls verlinkt.
+
+Der Footer reserviert unterhalb von `lg` zusätzlichen Abstand, damit der feste
+Balken die Links zu Impressum und Datenschutz nicht verdeckt.
 
 Die Inhalte der vier Leistungen stehen in `config/services.ts`.
 

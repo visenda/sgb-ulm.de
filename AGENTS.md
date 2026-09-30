@@ -25,6 +25,13 @@ ist vorgegeben und sollte nicht umgangen werden.
 
 - **Unternehmensdaten:** ausschließlich in `config/site.ts`. Nie Adressen,
   Telefonnummern oder Rechtsangaben in Komponenten hartkodieren.
+- **Kontaktdaten:** Anschrift/Telefon/E-Mail sind echt und hinterlegt.
+  Unter `site.legal` stehen noch Platzhalter (Vertretung, Register, USt-IdNr.).
+- **Anruf-Links:** immer `telHref` aus `config/site.ts` verwenden, nie
+  `tel:`-Strings in Komponenten bauen. Für E-Mail `mailHref`.
+  Der mobile Aktionsbalken (`components/MobileCallBar.tsx`) ist fest am unteren
+  Rand; wer dort Höhe ergänzt, muss den Footer-Abstand (`pb-24 lg:pb-6`)
+  mitziehen.
 - **Leistungsinhalte:** ausschließlich in `config/services.ts` (Rendering über
   `app/leistungen/[slug]/page.tsx`).
 - **Ports:** `APP_PORT_2` verwenden, keinen anderen Port binden.

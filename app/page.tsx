@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/config/site";
+import { site, telHref } from "@/config/site";
 import { services } from "@/config/services";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
@@ -265,7 +265,7 @@ export default function HomePage() {
             </p>
             <div className="mt-6 space-y-3">
               <a
-                href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                href={telHref}
                 className="flex items-center gap-3 text-white transition hover:text-brand-300"
               >
                 <PhoneIcon className="h-5 w-5 text-brand-300" />

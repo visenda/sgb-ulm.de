@@ -4,6 +4,7 @@ import { site } from "@/config/site";
 import { localBusinessJsonLd } from "@/lib/jsonld";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCallBar from "@/components/MobileCallBar";
 import "./globals.css";
 
 const inter = Inter({
@@ -51,7 +52,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brand-800 focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent-800 focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white"
         >
           Zum Inhalt springen
         </a>
@@ -60,6 +61,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <MobileCallBar />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

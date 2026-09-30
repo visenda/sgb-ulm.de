@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { footerLinks, site } from "@/config/site";
+import { footerLinks, mailHref, site, telHref } from "@/config/site";
 import { MailIcon, MapPinIcon, PhoneIcon } from "./Icons";
 
 export default function Footer() {
@@ -79,7 +79,7 @@ export default function Footer() {
             <li className="flex items-center gap-3">
               <PhoneIcon className="h-4 w-4 flex-none text-brand-300" />
               <a
-                href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                href={telHref}
                 className="transition hover:text-brand-300"
               >
                 {site.contact.phoneDisplay}
@@ -88,7 +88,7 @@ export default function Footer() {
             <li className="flex items-center gap-3">
               <MailIcon className="h-4 w-4 flex-none text-brand-300" />
               <a
-                href={`mailto:${site.contact.email}`}
+                href={mailHref}
                 className="transition hover:text-brand-300"
               >
                 {site.contact.email}
@@ -99,7 +99,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-x flex flex-col items-center justify-between gap-4 py-6 text-xs text-white/60 md:flex-row">
+        <div className="container-x flex flex-col items-center justify-between gap-4 py-6 pb-24 text-xs text-white/60 md:flex-row lg:pb-6">
           <p>
             © {year} {site.legalName}. Alle Rechte vorbehalten.
           </p>

@@ -1,9 +1,9 @@
 /**
  * Zentrale Konfiguration für SG Blitzblank.
  *
- * WICHTIG: Alle mit `MUSTER` markierten Angaben sind rechtlich unverbindliche
- * Platzhalter und müssen vor dem Livegang durch die echten Unternehmensdaten
- * ersetzt werden (Impressumspflicht nach § 5 DDG).
+ * Anschrift, Telefon und E-Mail sind echte Angaben. Die mit `MUSTER`
+ * markierten Felder unter `legal` (Vertretung, Registereintrag, USt-IdNr.)
+ * müssen vor dem Livegang ersetzt werden (Impressumspflicht nach § 5 DDG).
  */
 export const site = {
   name: "SG Blitzblank",
@@ -25,21 +25,24 @@ export const site = {
     wordmark: "/brand/sg-blitzblank-wordmark.png",
     ciSource: "docs/brand/sg-blitzblank-logo-ci.jpg",
   },
-  /** MUSTER – durch echte Angaben ersetzen */
+  /**
+   * Echte Kontaktdaten von SG Blitzblank.
+   * `phone` liegt im E.164-Format vor und wird für `tel:`-Links verwendet.
+   */
   contact: {
-    phone: "+49 000 0000000",
-    phoneDisplay: "0000 0000000",
+    phone: "+49 731 14615080",
+    phoneDisplay: "0731 14615080",
     email: "info@sgb-ulm.de",
-    street: "Musterstraße 1",
-    postalCode: "89073",
+    street: "Mähringerweg 86",
+    postalCode: "89075",
     city: "Ulm",
     region: "Baden-Württemberg",
     country: "DE",
     countryName: "Deutschland",
-    lat: 48.4011,
-    lng: 9.9876,
+    lat: 48.4112594,
+    lng: 9.9659751,
   },
-  /** MUSTER – durch echte Angaben ersetzen */
+  /** MUSTER – durch echte Angaben ersetzen (Registereintrag, USt-IdNr., Vertretung) */
   legal: {
     managingDirector: "Max Mustermann",
     registerCourt: "Amtsgericht Ulm",
@@ -68,6 +71,12 @@ export const site = {
   },
   foundingYear: 2015,
 } as const;
+
+/** E.164-Format ohne Leerzeichen – für `tel:`-Links (ein Tap zum Anrufen). */
+export const telHref = `tel:${site.contact.phone.replace(/\s/g, "")}`;
+
+/** `mailto:`-Link für die Kontaktadresse. */
+export const mailHref = `mailto:${site.contact.email}`;
 
 export const nav = [
   { label: "Startseite", href: "/" },

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { site } from "@/config/site";
+import { mailHref, site } from "@/config/site";
 import { PageHero, Section } from "@/components/Ui";
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function DatenschutzPage() {
             Telefon: {site.contact.phone}
             <br />
             E-Mail:{" "}
-            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+            <a href={mailHref}>{site.contact.email}</a>
           </p>
 
           <h2>2. Erhobene Daten und Zweck</h2>
@@ -110,7 +110,7 @@ export default function DatenschutzPage() {
           </ul>
           <p>
             Zur Ausübung Ihrer Rechte genügt eine Nachricht an{" "}
-            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.
+            <a href={mailHref}>{site.contact.email}</a>.
           </p>
 
           <h2>8. Beschwerderecht</h2>

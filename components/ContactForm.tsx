@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { services } from "@/config/services";
-import { site } from "@/config/site";
+import { mailHref, site } from "@/config/site";
 import { ArrowRightIcon, CheckIcon } from "./Icons";
 
 type FormState = {
@@ -121,7 +121,7 @@ export default function ContactForm({
           in Ihrem E-Mail-Programm ab. Falls sich nichts öffnet, schreiben Sie uns
           direkt an{" "}
           <a
-            href={`mailto:${site.contact.email}`}
+            href={mailHref}
             className="font-semibold text-brand-700 underline underline-offset-2"
           >
             {site.contact.email}

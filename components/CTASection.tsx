@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRightIcon, PhoneIcon } from "./Icons";
-import { site } from "@/config/site";
+import { site, telHref } from "@/config/site";
 
 export default function CTASection({
   title = "Bereit für ein sauberes Ergebnis?",
@@ -24,7 +24,7 @@ export default function CTASection({
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
               <a
-                href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                href={telHref}
                 className="btn-ghost justify-center"
               >
                 <PhoneIcon className="h-4 w-4" />
