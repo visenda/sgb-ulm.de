@@ -12,7 +12,7 @@ export default function CTASection({
   return (
     <section className="section">
       <div className="container-x">
-        <div className="overflow-hidden rounded-4xl bg-brand-800 px-6 py-12 text-white md:px-14 md:py-16">
+        <div className="overflow-hidden rounded-4xl bg-accent-800 px-6 py-12 text-white md:px-14 md:py-16">
           <div className="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
             <div>
               <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2>

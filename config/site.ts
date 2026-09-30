@@ -7,11 +7,24 @@
  */
 export const site = {
   name: "SG Blitzblank",
-  legalName: "SG Blitzblank Gebäudereinigung & Service",
-  claim: "Gebäudereinigung & Service",
+  legalName: "SG Blitzblank Gebäudemanagement",
+  claim: "Gebäudemanagement",
   url: "https://sgb-ulm.de",
   locale: "de_DE",
   language: "de",
+  /**
+   * Angaben aus dem offiziellen Logo/CI (Version 5).
+   * Akzentfarbe: CMYK 90/0/0/0 ≈ #76C5EE, Sekundärfarbe #434242.
+   */
+  brand: {
+    blue: "#76c5ee",
+    blueCmyk: "CMYK 90 / 0 / 0 / 0",
+    charcoal: "#434242",
+    logo: "/brand/sg-blitzblank-logo.png",
+    signet: "/brand/sg-blitzblank-signet.png",
+    wordmark: "/brand/sg-blitzblank-wordmark.png",
+    ciSource: "docs/brand/sg-blitzblank-logo-ci.jpg",
+  },
   /** MUSTER – durch echte Angaben ersetzen */
   contact: {
     phone: "+49 000 0000000",

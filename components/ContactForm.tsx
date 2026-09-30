@@ -110,13 +110,13 @@ export default function ContactForm({
     return (
       <div
         role="status"
-        className="rounded-3xl border border-accent-200 bg-accent-50 p-8 text-center"
+        className="rounded-3xl border border-brand-200 bg-brand-50 p-8 text-center"
       >
-        <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-500 text-white">
+        <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-brand-500 text-white">
           <CheckIcon className="h-7 w-7" />
         </span>
         <h3 className="mt-5 text-xl font-bold">Ihr E-Mail-Programm wird geöffnet</h3>
-        <p className="mx-auto mt-3 max-w-md text-brand-900/75">
+        <p className="mx-auto mt-3 max-w-md text-accent-900/75">
           Wir haben Ihre Angaben in eine E-Mail übernommen. Bitte senden Sie diese
           in Ihrem E-Mail-Programm ab. Falls sich nichts öffnet, schreiben Sie uns
           direkt an{" "}
@@ -191,7 +191,7 @@ export default function ContactForm({
 
         <div>
           <label htmlFor="phone" className="field-label">
-            Telefon <span className="text-brand-900/40">(optional)</span>
+            Telefon <span className="text-accent-900/40">(optional)</span>
           </label>
           <input
             id="phone"
@@ -263,7 +263,7 @@ export default function ContactForm({
       </div>
 
       <div>
-        <label className="flex items-start gap-3 text-sm text-brand-900/80">
+        <label className="flex items-start gap-3 text-sm text-accent-900/80">
           <input
             id="consent"
             name="consent"
@@ -298,7 +298,7 @@ export default function ContactForm({
         <ArrowRightIcon className="h-4 w-4" />
       </button>
 
-      <p className="text-xs text-brand-900/55">
+      <p className="text-xs text-accent-900/55">
         Pflichtfelder sind mit * gekennzeichnet. Beim Absenden öffnet sich Ihr
         E-Mail-Programm mit den vorausgefüllten Angaben.
       </p>

@@ -31,6 +31,11 @@ ist vorgegeben und sollte nicht umgangen werden.
 - **Design:** Tokens in `tailwind.config.ts` (`brand`, `accent`, `sand`),
   Utility-Klassen in `app/globals.css` (`.btn-*`, `.card`, `.section`,
   `.field-*`). Neue UI möglichst als Komponente in `components/`.
+- **Marke/CI:** Primärfarbe `#76C5EE` (CMYK 90/0/0/0, Tailwind `brand-400`),
+  Sekundärfarbe `#434242` (Tailwind `accent-800`), Claim „Gebäudemanagement“.
+  Logo-Dateien liegen in `public/brand/`, das CI-Handbuch in `docs/brand/`.
+  Die Bildlogos sind für **helle** Hintergründe gedacht; auf dunklen Flächen
+  `#76C5EE`/Weiß verwenden. Brand-Angaben stehen gebündelt in `site.brand`.
 - **Barrierefreiheit:** Labels für Formularfelder, `alt`-Texte für Bilder,
   sichtbare Fokus-Zustände, semantische Landmarks beibehalten.
 - **Bilder:** über `next/image`; neue Hosts in `next.config.mjs`

@@ -67,6 +67,29 @@ config/               Zentrale Angaben (site.ts) und Leistungsinhalte (services.
 lib/                  schema.org-JSON-LD
 ```
 
+## Marke und CI
+
+Das offizielle Logo und die Farben stammen aus dem CI-Handbuch
+(`docs/brand/sg-blitzblank-logo-ci.jpg`, Version 5).
+
+- Primärfarbe: `#76C5EE` (CMYK 90 / 0 / 0 / 0)
+- Sekundärfarbe: `#434242`
+- Claim: „Gebäudemanagement“
+
+Alle Farben sind in `tailwind.config.ts` als `brand` (Blautöne) und `accent`
+(Graustufen um `#434242`) hinterlegt. Die Assets liegen hier:
+
+| Datei                                  | Verwendung                          |
+| -------------------------------------- | ----------------------------------- |
+| `public/brand/sg-blitzblank-logo.png`  | Vollständiges Logo, heller Hintergrund (Header) |
+| `public/brand/sg-blitzblank-wordmark.png` | Schriftzug mit Subline           |
+| `public/brand/sg-blitzblank-signet.png` | Bildmarke, z. B. Footer/Favicon    |
+| `app/icon.png`, `app/apple-icon.png`   | Favicons (aus dem Signet erzeugt)   |
+
+Die Logo-Dateien kombinieren dunkle Schrift mit hellblauen Flächen und sind
+für **helle** Hintergründe gedacht. Auf dunklen Flächen (Header-Zeile, Footer)
+wird deshalb direkt `#76C5EE` bzw. Weiß verwendet, nicht das Bildlogo.
+
 ## Bilder
 
 Die Fotos werden von Unsplash geladen (kostenlos nutzbar). Die erlaubten

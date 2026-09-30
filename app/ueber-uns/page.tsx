@@ -8,7 +8,7 @@ import { LeafIcon, ShieldIcon, SparkleIcon, UsersIcon } from "@/components/Icons
 export const metadata: Metadata = {
   title: "Über uns – Ihr Gebäudedienstleister in Ulm",
   description:
-    "Lernen Sie SG Blitzblank kennen: ein Gebäudereinigungs- und Serviceunternehmen aus Ulm mit festen Teams, klaren Abläufen und persönlicher Betreuung.",
+    "Lernen Sie SG Blitzblank kennen: ein Gebäudemanagement-Unternehmen aus Ulm mit festen Teams, klaren Abläufen und persönlicher Betreuung.",
   alternates: { canonical: "/ueber-uns" },
 };
 
@@ -44,7 +44,7 @@ export default function UeberUnsPage() {
       <PageHero
         eyebrow="Über uns"
         title="Ihr Gebäudedienstleister aus Ulm"
-        intro="SG Blitzblank ist ein regionales Unternehmen für Gebäudereinigung und Gebäudeservice. Wir verbinden handwerkliche Sorgfalt mit klaren Abläufen – damit Ihre Objekte dauerhaft gepflegt bleiben."
+        intro="SG Blitzblank ist ein regionales Unternehmen für Gebäudemanagement. Wir verbinden handwerkliche Sorgfalt mit klaren Abläufen – damit Ihre Objekte dauerhaft gepflegt bleiben."
         breadcrumbs={[{ label: "Startseite", href: "/" }, { label: "Über uns" }]}
       />
 
@@ -69,7 +69,7 @@ export default function UeberUnsPage() {
               <p>
                 Seit {site.foundingYear} betreuen wir gewerbliche Objekte,
                 Hausverwaltungen und private Haushalte in {site.region.headline}.
-                Aus kleinen Anfängen ist ein Team gewachsen, das Gebäudereinigung
+                Aus kleinen Anfängen ist ein Team gewachsen, das Gebäudemanagement
                 als Handwerk versteht: mit dem passenden Verfahren, der richtigen
                 Ausrüstung und einem Blick fürs Detail.
               </p>
@@ -97,7 +97,7 @@ export default function UeberUnsPage() {
                 <value.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-5 text-lg font-bold">{value.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-900/70">
+              <p className="mt-3 text-sm leading-relaxed text-accent-900/70">
                 {value.text}
               </p>
             </div>

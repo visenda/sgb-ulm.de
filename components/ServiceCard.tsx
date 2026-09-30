@@ -26,10 +26,10 @@ export default function ServiceCard({
       </div>
       <div className="flex flex-1 flex-col p-6 md:p-7">
         <h3 className="text-xl font-bold">{service.title}</h3>
-        <p className="mt-3 flex-1 text-brand-900/70">{service.teaser}</p>
+        <p className="mt-3 flex-1 text-accent-900/70">{service.teaser}</p>
         <Link
           href={`/leistungen/${service.slug}`}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 transition group-hover:gap-3 hover:text-brand-900"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 transition group-hover:gap-3 hover:text-accent-900"
         >
           Leistung ansehen
           <ArrowRightIcon className="h-4 w-4" />

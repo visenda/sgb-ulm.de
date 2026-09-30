@@ -8,7 +8,7 @@ export function localBusinessJsonLd() {
     "@id": `${site.url}/#organisation`,
     name: site.legalName,
     description:
-      "Gebäudereinigung & Service in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung.",
+      "Gebäudemanagement in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung.",
     url: site.url,
     telephone: site.contact.phone,
     email: site.contact.email,

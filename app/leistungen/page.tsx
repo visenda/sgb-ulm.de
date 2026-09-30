@@ -6,7 +6,7 @@ import { PageHero, Section, SectionHeading, CheckList } from "@/components/Ui";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Leistungen – Gebäudereinigung & Service",
+  title: "Leistungen – Gebäudemanagement",
   description:
     "Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung in Ulm und Umgebung. Alle Leistungen von SG Blitzblank im Überblick.",
   alternates: { canonical: "/leistungen" },
@@ -25,7 +25,7 @@ export default function LeistungenPage() {
     <>
       <PageHero
         eyebrow="Leistungen"
-        title="Gebäudereinigung und Service für Ihr Objekt"
+        title="Gebäudemanagement für Ihr Objekt"
         intro="Von der Fensterreinigung bis zur laufenden Unterhaltsreinigung: Wir bündeln alle Gebäudedienstleistungen in einem verlässlichen Paket – abgestimmt auf Gewerbe, Hausverwaltungen und Privatkunden in Ulm und Umgebung."
         breadcrumbs={[{ label: "Startseite", href: "/" }, { label: "Leistungen" }]}
       />
@@ -61,7 +61,7 @@ export default function LeistungenPage() {
           <h2 className="text-2xl font-bold md:text-3xl">
             Gewerbe, Verwaltung oder Privatkunde?
           </h2>
-          <p className="mt-4 max-w-3xl text-brand-900/75">
+          <p className="mt-4 max-w-3xl text-accent-900/75">
             Wir betreuen Bürogebäude, Praxen, Gastronomie, Hausverwaltungen und
             private Haushalte in {site.region.headline}. Sprechen Sie uns an – wir
             prüfen Ihren Bedarf und schlagen ein passendes Leistungspaket vor.

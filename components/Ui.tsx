@@ -33,7 +33,7 @@ export function SectionHeading({
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
       <h2 className="mt-3 text-3xl font-bold md:text-4xl">{title}</h2>
-      {intro && <p className="mt-4 text-lg leading-relaxed text-brand-900/70">{intro}</p>}
+      {intro && <p className="mt-4 text-lg leading-relaxed text-accent-900/70">{intro}</p>}
     </div>
   );
 }
@@ -52,7 +52,7 @@ export function CheckList({
           <span className="mt-0.5 grid h-5 w-5 flex-none place-items-center rounded-full bg-accent-100 text-accent-700">
             <CheckIcon className="h-3.5 w-3.5" />
           </span>
-          <span className="text-brand-900/80">{item}</span>
+          <span className="text-accent-900/80">{item}</span>
         </li>
       ))}
     </ul>
@@ -66,7 +66,7 @@ export function Breadcrumbs({
 }) {
   return (
     <nav aria-label="Brotkrümelnavigation" className="text-sm">
-      <ol className="flex flex-wrap items-center gap-2 text-brand-900/60">
+      <ol className="flex flex-wrap items-center gap-2 text-accent-900/60">
         {items.map((item, index) => (
           <li key={item.label} className="flex items-center gap-2">
             {index > 0 && <span aria-hidden="true">/</span>}
@@ -75,7 +75,7 @@ export function Breadcrumbs({
                 {item.label}
               </Link>
             ) : (
-              <span className="font-medium text-brand-900">{item.label}</span>
+              <span className="font-medium text-accent-900">{item.label}</span>
             )}
           </li>
         ))}
@@ -102,7 +102,7 @@ export function PageHero({
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
         <h1 className="mt-3 max-w-4xl text-3xl font-bold md:text-5xl">{title}</h1>
         {intro && (
-          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-brand-900/70">
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-accent-900/70">
             {intro}
           </p>
         )}

@@ -5,7 +5,7 @@ import { PageHero, Section } from "@/components/Ui";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum und Anbieterkennzeichnung von SG Blitzblank, Gebäudereinigung & Service in Ulm.",
+    "Impressum und Anbieterkennzeichnung von SG Blitzblank, Gebäudemanagement in Ulm.",
   alternates: { canonical: "/impressum" },
   robots: { index: false, follow: true },
 };

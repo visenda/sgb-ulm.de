@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { footerLinks, site } from "@/config/site";
 import { MailIcon, MapPinIcon, PhoneIcon } from "./Icons";
@@ -9,9 +10,15 @@ export default function Footer() {
     <footer className="bg-brand-950 text-white/75">
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white font-display text-lg font-bold text-brand-800">
-              SG
+          <div className="flex items-center gap-4">
+            <span className="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-white p-1.5">
+              <Image
+                src={site.brand.signet}
+                alt=""
+                width={911}
+                height={1110}
+                className="h-full w-full object-contain"
+              />
             </span>
             <span className="leading-tight">
               <span className="block font-display text-lg font-bold text-white">
@@ -21,7 +28,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-5 text-sm leading-relaxed">
-            Ihr Partner für professionelle Gebäudereinigung und Gebäudeservice in{" "}
+            Ihr Partner für professionelles Gebäudemanagement in{" "}
             {site.region.headline}. Sauberkeit, auf die Sie sich verlassen können.
           </p>
         </div>
@@ -33,7 +40,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             {footerLinks.leistungen.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition hover:text-accent-300">
+                <Link href={link.href} className="transition hover:text-brand-300">
                   {link.label}
                 </Link>
               </li>
@@ -48,7 +55,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             {footerLinks.unternehmen.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition hover:text-accent-300">
+                <Link href={link.href} className="transition hover:text-brand-300">
                   {link.label}
                 </Link>
               </li>
@@ -62,7 +69,7 @@ export default function Footer() {
           </h2>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3">
-              <MapPinIcon className="mt-0.5 h-4 w-4 flex-none text-accent-300" />
+              <MapPinIcon className="mt-0.5 h-4 w-4 flex-none text-brand-300" />
               <span>
                 {site.contact.street}
                 <br />
@@ -70,19 +77,19 @@ export default function Footer() {
               </span>
             </li>
             <li className="flex items-center gap-3">
-              <PhoneIcon className="h-4 w-4 flex-none text-accent-300" />
+              <PhoneIcon className="h-4 w-4 flex-none text-brand-300" />
               <a
                 href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-                className="transition hover:text-accent-300"
+                className="transition hover:text-brand-300"
               >
                 {site.contact.phoneDisplay}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <MailIcon className="h-4 w-4 flex-none text-accent-300" />
+              <MailIcon className="h-4 w-4 flex-none text-brand-300" />
               <a
                 href={`mailto:${site.contact.email}`}
-                className="transition hover:text-accent-300"
+                className="transition hover:text-brand-300"
               >
                 {site.contact.email}
               </a>

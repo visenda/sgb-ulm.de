@@ -19,9 +19,9 @@ import {
 } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: `${site.name} – Gebäudereinigung & Service in Ulm`,
+  title: `${site.name} – Gebäudemanagement in Ulm`,
   description:
-    "Gebäudereinigung & Service in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung. Jetzt unverbindliches Angebot anfragen.",
+    "Gebäudemanagement in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung. Jetzt unverbindliches Angebot anfragen.",
   alternates: { canonical: "/" },
 };
 
@@ -108,7 +108,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-950/85 to-brand-950/50" />
         <div className="container-x relative py-20 md:py-28 lg:py-32">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
               <MapPinIcon className="h-3.5 w-3.5" />
               {site.region.headline}
             </span>
@@ -116,7 +116,7 @@ export default function HomePage() {
               Sauberkeit, auf die Sie sich verlassen können.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
-              SG Blitzblank steht für professionelle Gebäudereinigung &amp; Service
+              SG Blitzblank steht für professionelles Gebäudemanagement
               in Ulm und Umgebung – zuverlässig, gründlich und mit festen
               Ansprechpartnern für Ihr Objekt.
             </p>
@@ -188,7 +188,7 @@ export default function HomePage() {
                 <reason.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-5 text-lg font-bold">{reason.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-900/70">
+              <p className="mt-3 text-sm leading-relaxed text-accent-900/70">
                 {reason.text}
               </p>
             </div>
@@ -222,7 +222,7 @@ export default function HomePage() {
                 </span>
                 <div>
                   <h3 className="text-lg font-bold">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-900/70">
+                  <p className="mt-2 text-sm leading-relaxed text-accent-900/70">
                     {step.text}
                   </p>
                 </div>
@@ -235,7 +235,7 @@ export default function HomePage() {
       <Section className="bg-brand-900 text-white">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <span className="eyebrow text-accent-300">Einsatzgebiet</span>
+            <span className="eyebrow text-brand-300">Einsatzgebiet</span>
             <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
               Für {site.region.city} und die Region im Einsatz
             </h2>
@@ -266,13 +266,13 @@ export default function HomePage() {
             <div className="mt-6 space-y-3">
               <a
                 href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-white transition hover:text-accent-300"
+                className="flex items-center gap-3 text-white transition hover:text-brand-300"
               >
-                <PhoneIcon className="h-5 w-5 text-accent-300" />
+                <PhoneIcon className="h-5 w-5 text-brand-300" />
                 {site.contact.phoneDisplay}
               </a>
               <p className="flex items-center gap-3 text-white/85">
-                <MapPinIcon className="h-5 w-5 text-accent-300" />
+                <MapPinIcon className="h-5 w-5 text-brand-300" />
                 {site.contact.street}, {site.contact.postalCode}{" "}
                 {site.contact.city}
               </p>

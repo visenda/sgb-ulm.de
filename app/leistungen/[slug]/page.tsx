@@ -85,7 +85,7 @@ export default async function ServiceDetailPage({
             <h2 className="mt-3 text-3xl font-bold md:text-4xl">
               {service.title} vom Fachbetrieb
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-brand-900/75">
+            <p className="mt-5 text-lg leading-relaxed text-accent-900/75">
               {service.intro}
             </p>
             <div className="mt-8">
@@ -129,7 +129,7 @@ export default async function ServiceDetailPage({
                   <span className="mt-0.5 grid h-5 w-5 flex-none place-items-center rounded-full bg-brand-100 text-brand-700">
                     <CheckIcon className="h-3.5 w-3.5" />
                   </span>
-                  <span className="text-brand-900/80">{item}</span>
+                  <span className="text-accent-900/80">{item}</span>
                 </li>
               ))}
             </ul>
@@ -153,7 +153,7 @@ export default async function ServiceDetailPage({
               title={`${service.title} anfragen`}
               intro="Schreiben Sie uns kurz, worum es geht – wir melden uns mit einem passenden Angebot."
             />
-            <p className="mt-6 text-brand-900/75">
+            <p className="mt-6 text-accent-900/75">
               Beim Absenden öffnet sich Ihr E-Mail-Programm mit den
               vorausgefüllten Angaben. Die Leistung ist bereits vorausgewählt.
             </p>

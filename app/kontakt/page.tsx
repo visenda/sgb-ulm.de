@@ -37,7 +37,7 @@ export default function KontaktPage() {
                 </span>
                 <div>
                   <p className="font-semibold">Adresse</p>
-                  <p className="text-brand-900/70">
+                  <p className="text-accent-900/70">
                     {site.contact.street}
                     <br />
                     {site.contact.postalCode} {site.contact.city}
@@ -54,7 +54,7 @@ export default function KontaktPage() {
                   <p className="font-semibold">Telefon</p>
                   <a
                     href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-                    className="text-brand-900/70 hover:text-brand-700"
+                    className="text-accent-900/70 hover:text-brand-700"
                   >
                     {site.contact.phoneDisplay}
                   </a>
@@ -68,7 +68,7 @@ export default function KontaktPage() {
                   <p className="font-semibold">E-Mail</p>
                   <a
                     href={`mailto:${site.contact.email}`}
-                    className="text-brand-900/70 hover:text-brand-700"
+                    className="text-accent-900/70 hover:text-brand-700"
                   >
                     {site.contact.email}
                   </a>
@@ -87,7 +87,7 @@ export default function KontaktPage() {
                     key={entry.days}
                     className="flex items-center justify-between gap-4 border-b border-brand-50 pb-2 last:border-none"
                   >
-                    <dt className="text-brand-900/70">{entry.days}</dt>
+                    <dt className="text-accent-900/70">{entry.days}</dt>
                     <dd className="font-medium">{entry.hours}</dd>
                   </div>
                 ))}
@@ -97,7 +97,7 @@ export default function KontaktPage() {
 
           <div className="card">
             <h2 className="text-2xl font-bold">Angebot anfragen</h2>
-            <p className="mt-2 text-sm text-brand-900/70">
+            <p className="mt-2 text-sm text-accent-900/70">
               Füllen Sie die Felder aus – wir melden uns mit einem passenden
               Vorschlag. Pflichtfelder sind mit * gekennzeichnet.
             </p>
@@ -113,7 +113,7 @@ export default function KontaktPage() {
           <h2 className="text-2xl font-bold md:text-3xl">
             Einsatzgebiet: {site.region.headline}
           </h2>
-          <p className="mt-4 max-w-3xl text-brand-900/75">
+          <p className="mt-4 max-w-3xl text-accent-900/75">
             Wir sind in {site.region.city} und der umliegenden Region tätig. Auch
             wenn Ihr Ort hier nicht aufgeführt ist, lohnt sich eine Anfrage – in
             vielen Fällen erweitern wir unser Gebiet gern.
@@ -122,7 +122,7 @@ export default function KontaktPage() {
             {site.region.areas.map((area) => (
               <span
                 key={area}
-                className="rounded-full bg-brand-50 px-4 py-2 text-sm font-medium text-brand-800"
+                className="rounded-full bg-brand-50 px-4 py-2 text-sm font-medium text-accent-800"
               >
                 {area}
               </span>

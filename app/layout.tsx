@@ -19,8 +19,9 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "SG Blitzblank ist Ihr Partner für Gebäudereinigung & Service in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung.",
+    "SG Blitzblank ist Ihr Partner für Gebäudemanagement in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung.",
   keywords: [
+    "Gebäudemanagement Ulm",
     "Gebäudereinigung Ulm",
     "Fensterreinigung Ulm",
     "Terrassenreinigung",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} – ${site.claim}`,
     description:
-      "Professionelle Gebäudereinigung & Service in Ulm und Umgebung. Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung aus einer Hand.",
+      "Professionelles Gebäudemanagement in Ulm und Umgebung. Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung aus einer Hand.",
   },
   robots: { index: true, follow: true },
 };

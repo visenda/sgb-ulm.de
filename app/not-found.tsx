@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="mt-4 text-4xl font-bold md:text-5xl">
           Diese Seite konnten wir nicht finden
         </h1>
-        <p className="mt-5 max-w-xl text-lg text-brand-900/70">
+        <p className="mt-5 max-w-xl text-lg text-accent-900/70">
           Die aufgerufene Seite existiert nicht oder wurde verschoben. Nutzen Sie
           gern die folgenden Links oder kontaktieren Sie uns direkt.
         </p>

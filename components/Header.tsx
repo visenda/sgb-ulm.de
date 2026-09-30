@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -32,12 +33,12 @@ export default function Header() {
       <div className="hidden border-b border-brand-100 bg-brand-950 py-2 text-xs text-white/80 md:block">
         <div className="container-x flex items-center justify-between">
           <p>
-            Gebäudereinigung &amp; Service in {site.region.headline} – zuverlässig,
+            Gebäudemanagement in {site.region.headline} – zuverlässig,
             gründlich, planbar.
           </p>
           <a
             href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-            className="inline-flex items-center gap-2 font-semibold text-white hover:text-accent-300"
+            className="inline-flex items-center gap-2 font-semibold text-white hover:text-brand-300"
           >
             <PhoneIcon className="h-3.5 w-3.5" />
             {site.contact.phoneDisplay}
@@ -46,17 +47,21 @@ export default function Header() {
       </div>
 
       <div className="container-x flex h-16 items-center justify-between gap-4 md:h-20">
-        <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} Startseite`}>
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-700 font-display text-lg font-bold text-white">
-            SG
-          </span>
-          <span className="leading-tight">
-            <span className="block font-display text-lg font-bold text-brand-950">
-              {site.name}
-            </span>
-            <span className="block text-xs font-medium text-brand-900/60">
-              {site.claim}
-            </span>
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          aria-label={`${site.name} – Startseite`}
+        >
+          <Image
+            src={site.brand.logo}
+            alt={`${site.legalName} Logo`}
+            width={2363}
+            height={1628}
+            priority
+            className="h-11 w-auto md:h-12"
+          />
+          <span className="sr-only">
+            {site.name} – {site.claim}
           </span>
         </Link>
 
@@ -69,7 +74,7 @@ export default function Header() {
                   className={`inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold transition ${
                     isActive(item.href)
                       ? "text-brand-700"
-                      : "text-brand-900/70 hover:text-brand-700"
+                      : "text-accent-900/70 hover:text-brand-700"
                   }`}
                   aria-current={isActive(item.href) ? "page" : undefined}
                 >
@@ -82,7 +87,7 @@ export default function Header() {
                       <Link
                         key={service.slug}
                         href={`/leistungen/${service.slug}`}
-                        className="block rounded-xl px-4 py-3 text-sm font-medium text-brand-900/80 transition hover:bg-brand-50 hover:text-brand-800"
+                        className="block rounded-xl px-4 py-3 text-sm font-medium text-accent-900/80 transition hover:bg-brand-50 hover:text-accent-800"
                       >
                         {service.title}
                       </Link>
@@ -97,7 +102,7 @@ export default function Header() {
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
                   isActive(item.href)
                     ? "text-brand-700"
-                    : "text-brand-900/70 hover:text-brand-700"
+                    : "text-accent-900/70 hover:text-brand-700"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
@@ -113,7 +118,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((value) => !value)}
-          className="grid h-11 w-11 place-items-center rounded-xl border border-brand-200 text-brand-800 lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-xl border border-brand-200 text-accent-800 lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
@@ -129,7 +134,7 @@ export default function Header() {
               <div key={item.href}>
                 <Link
                   href={item.href}
-                  className="block rounded-xl px-4 py-3 text-base font-semibold text-brand-900 hover:bg-brand-50"
+                  className="block rounded-xl px-4 py-3 text-base font-semibold text-accent-900 hover:bg-brand-50"
                 >
                   {item.label}
                 </Link>
@@ -139,7 +144,7 @@ export default function Header() {
                       <Link
                         key={service.slug}
                         href={`/leistungen/${service.slug}`}
-                        className="block rounded-lg px-3 py-2 text-sm font-medium text-brand-900/70 hover:bg-brand-50 hover:text-brand-800"
+                        className="block rounded-lg px-3 py-2 text-sm font-medium text-accent-900/70 hover:bg-brand-50 hover:text-accent-800"
                       >
                         {service.title}
                       </Link>

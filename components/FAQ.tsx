@@ -7,7 +7,7 @@ export default function FAQ({
     <div className="divide-y divide-brand-100 overflow-hidden rounded-3xl border border-brand-100 bg-white">
       {items.map((item) => (
         <details key={item.question} className="group">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-semibold text-brand-950 transition hover:bg-sand-50 [&::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-semibold text-accent-950 transition hover:bg-sand-50 [&::-webkit-details-marker]:hidden">
             {item.question}
             <span
               aria-hidden="true"
@@ -16,7 +16,7 @@ export default function FAQ({
               +
             </span>
           </summary>
-          <div className="px-6 pb-6 text-brand-900/75">{item.answer}</div>
+          <div className="px-6 pb-6 text-accent-900/75">{item.answer}</div>
         </details>
       ))}
     </div>
