@@ -50,18 +50,26 @@ export default function Header() {
         <Link
           href="/"
           className="flex items-center gap-3"
-          aria-label={`${site.name} – Startseite`}
+          aria-label={`${site.name} – ${site.claim} – zur Startseite`}
         >
           <Image
-            src={site.brand.logo}
-            alt={`${site.legalName} Logo`}
-            width={2363}
-            height={1628}
+            src={site.brand.signet}
+            alt=""
+            width={911}
+            height={1110}
             priority
-            className="h-11 w-auto md:h-12"
+            className="h-9 w-auto md:h-10"
           />
-          <span className="sr-only">
-            {site.name} – {site.claim}
+          <Image
+            src={site.brand.wordmark}
+            alt=""
+            width={2363}
+            height={368}
+            priority
+            className="hidden h-[22px] w-auto sm:block md:h-6"
+          />
+          <span className="font-display text-base font-bold leading-none text-accent-950 sm:hidden">
+            {site.name}
           </span>
         </Link>
 

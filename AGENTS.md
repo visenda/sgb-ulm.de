@@ -36,6 +36,8 @@ ist vorgegeben und sollte nicht umgangen werden.
   Logo-Dateien liegen in `public/brand/`, das CI-Handbuch in `docs/brand/`.
   Die Bildlogos sind für **helle** Hintergründe gedacht; auf dunklen Flächen
   `#76C5EE`/Weiß verwenden. Brand-Angaben stehen gebündelt in `site.brand`.
+  Im Header Signet + Wortmarke verwenden, **nicht** das vollständige Logo
+  (`site.brand.logo`) – das ist für die Kopfzeile zu hoch.
 - **Barrierefreiheit:** Labels für Formularfelder, `alt`-Texte für Bilder,
   sichtbare Fokus-Zustände, semantische Landmarks beibehalten.
 - **Bilder:** über `next/image`; neue Hosts in `next.config.mjs`

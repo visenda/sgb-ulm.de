@@ -81,10 +81,14 @@ Alle Farben sind in `tailwind.config.ts` als `brand` (Blautöne) und `accent`
 
 | Datei                                  | Verwendung                          |
 | -------------------------------------- | ----------------------------------- |
-| `public/brand/sg-blitzblank-logo.png`  | Vollständiges Logo, heller Hintergrund (Header) |
-| `public/brand/sg-blitzblank-wordmark.png` | Schriftzug mit Subline           |
-| `public/brand/sg-blitzblank-signet.png` | Bildmarke, z. B. Footer/Favicon    |
+| `public/brand/sg-blitzblank-signet.png` | Bildmarke: Header, Footer, Favicon-Quelle |
+| `public/brand/sg-blitzblank-wordmark.png` | Schriftzug mit Subline: Header      |
+| `public/brand/sg-blitzblank-logo.png`  | Vollständiges Logo für große Flächen/Print (nicht im Header – zu hoch) |
 | `app/icon.png`, `app/apple-icon.png`   | Favicons (aus dem Signet erzeugt)   |
+
+Der Header kombiniert Signet (`h-9`/`h-10`) und Wortmarke (`h-[22px]`/`h-6`);
+das vollständige Logo wäre in der Kopfzeile zu hoch. Unter `sm` wird statt der
+Wortmarke der Name als Text gezeigt.
 
 Die Logo-Dateien kombinieren dunkle Schrift mit hellblauen Flächen und sind
 für **helle** Hintergründe gedacht. Auf dunklen Flächen (Header-Zeile, Footer)
