@@ -88,9 +88,13 @@ export const nav = [
 export const footerLinks = {
   leistungen: [
     { label: "Fensterreinigung", href: "/leistungen/fensterreinigung" },
+    { label: "Osmose-Reinigung", href: "/leistungen/osmose-reinigung" },
     { label: "Terrassenarbeiten", href: "/leistungen/terrassenarbeiten" },
     { label: "Baureinigung", href: "/leistungen/baureinigung" },
     { label: "Unterhaltsreinigung", href: "/leistungen/unterhaltsreinigung" },
+    { label: "Haushaltsauflösung", href: "/leistungen/haushaltsaufloesung" },
+    { label: "Umzüge", href: "/leistungen/umzuege" },
+    { label: "Entrümpelung", href: "/leistungen/entruempelung" },
   ],
   unternehmen: [
     { label: "Startseite", href: "/" },

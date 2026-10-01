@@ -8,7 +8,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "Leistungen – Gebäudemanagement",
   description:
-    "Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung in Ulm und Umgebung. Alle Leistungen von SG Blitzblank im Überblick.",
+    "Fensterreinigung, Osmose-Reinigung, Terrassenarbeiten, Baureinigung, Unterhaltsreinigung, Haushaltsauflösung, Umzüge und Entrümpelung in Ulm und Umgebung. Alle Leistungen von SG Blitzblank im Überblick.",
   alternates: { canonical: "/leistungen" },
 };
 
@@ -33,7 +33,7 @@ export default function LeistungenPage() {
       <Section className="bg-white">
         <SectionHeading
           eyebrow="Überblick"
-          title="Vier Leistungen, ein Partner"
+          title="Acht Leistungen, ein Partner"
           intro="Wählen Sie einzelne Leistungen oder kombinieren Sie sie zu einem passenden Betreuungspaket."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

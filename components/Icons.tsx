@@ -49,6 +49,42 @@ export function MaintenanceIcon(props: IconProps) {
   );
 }
 
+export function OsmosisIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z" />
+    </svg>
+  );
+}
+
+export function ClearanceIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path d="M3.3 7L12 12l8.7-5M12 22V12" />
+    </svg>
+  );
+}
+
+export function MovingIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M1 3h13v13H1zM14 8h4l3 3v5h-7" />
+      <circle cx="5.5" cy="18.5" r="2.5" />
+      <circle cx="17.5" cy="18.5" r="2.5" />
+    </svg>
+  );
+}
+
+export function DisposalIcon(props: IconProps) {
+  return (
+    <svg {...base} aria-hidden="true" {...props}>
+      <path d="M3 6h18M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+      <path d="M10 11v6M14 11v6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+    </svg>
+  );
+}
+
 export function ServiceGlyph({
   name,
   ...props
@@ -62,6 +98,14 @@ export function ServiceGlyph({
       return <ConstructionIcon {...props} />;
     case "maintenance":
       return <MaintenanceIcon {...props} />;
+    case "osmosis":
+      return <OsmosisIcon {...props} />;
+    case "clearance":
+      return <ClearanceIcon {...props} />;
+    case "moving":
+      return <MovingIcon {...props} />;
+    case "disposal":
+      return <DisposalIcon {...props} />;
   }
 }
 

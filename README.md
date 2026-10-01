@@ -9,9 +9,13 @@ The site content is entirely German and statically pre-rendered.
 ## Services
 
 - Fensterreinigung (window cleaning)
+- Osmose-Reinigung (window cleaning with demineralised water)
 - Terrassenarbeiten (terrace and outdoor area works)
 - Baureinigung (post-construction cleaning)
 - Unterhaltsreinigung (routine maintenance cleaning)
+- Haushaltsauflösung (household clearance)
+- Umzüge (moving services)
+- Entrümpelung (junk removal / clearance)
 
 ## Getting started
 

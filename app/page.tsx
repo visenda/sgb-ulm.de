@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: `${site.name} – Gebäudemanagement in Ulm`,
   description:
-    "Gebäudemanagement in Ulm und Umgebung: Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung. Jetzt unverbindliches Angebot anfragen.",
+    "Gebäudemanagement in Ulm und Umgebung: Fensterreinigung, Osmose-Reinigung, Terrassenarbeiten, Baureinigung, Unterhaltsreinigung, Haushaltsauflösung, Umzüge und Entrümpelung. Jetzt unverbindliches Angebot anfragen.",
   alternates: { canonical: "/" },
 };
 
@@ -74,7 +74,7 @@ const homeFaq = [
   {
     question: "Welche Leistungen bietet SG Blitzblank an?",
     answer:
-      "Wir übernehmen Fensterreinigung, Terrassenarbeiten, Baureinigung und Unterhaltsreinigung für Gewerbe, Hausverwaltungen und Privatkunden in Ulm und Umgebung.",
+      "Wir übernehmen Fensterreinigung, Osmose-Reinigung, Terrassenarbeiten, Baureinigung, Unterhaltsreinigung, Haushaltsauflösung, Umzüge und Entrümpelung für Gewerbe, Hausverwaltungen und Privatkunden in Ulm und Umgebung.",
   },
   {
     question: "Wie schnell erhalte ich ein Angebot?",
@@ -134,7 +134,9 @@ export default function HomePage() {
                 <dt className="text-xs uppercase tracking-wide text-white/50">
                   Leistungen
                 </dt>
-                <dd className="mt-1 text-2xl font-bold text-white">4</dd>
+                <dd className="mt-1 text-2xl font-bold text-white">
+                  {services.length}
+                </dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-white/50">
