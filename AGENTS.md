@@ -2,6 +2,12 @@
 
 Repository-Kontext für zukünftige Sessions. Kurz und praxisbezogen halten.
 
+## Repository
+
+- Remote: <https://github.com/visenda/sgb-ulm.de> (Org `visenda`)
+- Standardbranch: `main` – dort wird direkt gearbeitet/gepusht.
+- Live-Domain: <https://sgb-ulm.de>
+
 ## Projekt
 
 Statische Marketing-Website für **SG Blitzblank – Gebäudereinigung & Service**
