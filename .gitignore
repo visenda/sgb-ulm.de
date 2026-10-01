@@ -1,4 +1,4 @@
-# Abhängigkeiten
+# Dependencies
 /node_modules
 
 # Next.js
@@ -7,14 +7,14 @@
 next-env.d.ts
 *.tsbuildinfo
 
-# Produktion
+# Production
 /build
 
-# Umgebung
+# Environment
 .env
 .env*.local
 
-# Betriebssystem
+# Operating system
 .DS_Store
 *.pem
 
@@ -28,5 +28,5 @@ yarn-error.log*
 !.vscode/extensions.json
 .idea/
 
-# Lokaler OpenHands-Gesprächsspeicher (kein Projektcode)
+# Local OpenHands conversation store (not project code)
 /conversations/

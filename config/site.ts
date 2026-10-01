@@ -1,9 +1,9 @@
 /**
- * Zentrale Konfiguration für SG Blitzblank.
+ * Central configuration for SG Blitzblank.
  *
- * Anschrift, Telefon und E-Mail sind echte Angaben. Die mit `MUSTER`
- * markierten Felder unter `legal` (Vertretung, Registereintrag, USt-IdNr.)
- * müssen vor dem Livegang ersetzt werden (Impressumspflicht nach § 5 DDG).
+ * Address, phone number and email are real data. Fields marked `MUSTER`
+ * (placeholder) under `legal` - legal representative, commercial register,
+ * VAT ID - must be replaced before going live (§ 5 DDG imprint obligation).
  */
 export const site = {
   name: "SG Blitzblank",
@@ -13,8 +13,8 @@ export const site = {
   locale: "de_DE",
   language: "de",
   /**
-   * Angaben aus dem offiziellen Logo/CI (Version 5).
-   * Akzentfarbe: CMYK 90/0/0/0 ≈ #76C5EE, Sekundärfarbe #434242.
+   * Official logo/CI values (version 5).
+   * Accent colour: CMYK 90/0/0/0 ≈ #76C5EE, secondary colour #434242.
    */
   brand: {
     blue: "#76c5ee",
@@ -26,8 +26,8 @@ export const site = {
     ciSource: "docs/brand/sg-blitzblank-logo-ci.jpg",
   },
   /**
-   * Echte Kontaktdaten von SG Blitzblank.
-   * `phone` liegt im E.164-Format vor und wird für `tel:`-Links verwendet.
+   * Real SG Blitzblank contact details.
+   * `phone` is stored in E.164 format and is used to build `tel:` links.
    */
   contact: {
     phone: "+49 731 14615080",
@@ -42,7 +42,7 @@ export const site = {
     lat: 48.4112594,
     lng: 9.9659751,
   },
-  /** MUSTER – durch echte Angaben ersetzen (Registereintrag, USt-IdNr., Vertretung) */
+  /** Placeholder - replace with the real register entry, VAT ID and representative */
   legal: {
     managingDirector: "Max Mustermann",
     registerCourt: "Amtsgericht Ulm",
@@ -72,10 +72,10 @@ export const site = {
   foundingYear: 2015,
 } as const;
 
-/** E.164-Format ohne Leerzeichen – für `tel:`-Links (ein Tap zum Anrufen). */
+/** E.164 format without spaces - used for `tel:` links (one tap to call). */
 export const telHref = `tel:${site.contact.phone.replace(/\s/g, "")}`;
 
-/** `mailto:`-Link für die Kontaktadresse. */
+/** `mailto:` link for the contact address. */
 export const mailHref = `mailto:${site.contact.email}`;
 
 export const nav = [

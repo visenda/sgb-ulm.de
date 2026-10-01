@@ -3,9 +3,9 @@ import { site, telHref } from "@/config/site";
 import { ArrowRightIcon, PhoneIcon } from "./Icons";
 
 /**
- * Mobile Aktionsleiste: erlaubt das direkte Anrufen mit einem Tap.
- * Nur unterhalb von `lg` sichtbar (dort ist der Header-Anrufbutton ausgeblendet
- * bzw. die Navigation zusammengeklappt).
+ * Mobile action bar: lets visitors call with a single tap.
+ * Visible only below `lg`, where the header call button is icon-only
+ * and the navigation is collapsed.
  */
 export default function MobileCallBar() {
   return (

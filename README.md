@@ -1,123 +1,122 @@
-# SG Blitzblank – Website
+# SG Blitzblank - Website
 
-Marketing-Website für **SG Blitzblank – Gebäudereinigung & Service** in Ulm
-(Domain: [sgb-ulm.de](https://sgb-ulm.de)).
+Marketing website for **SG Blitzblank - Gebäudemanagement** in Ulm
+(domain: [sgb-ulm.de](https://sgb-ulm.de)).
 
-Erstellt mit Next.js (App Router), React, TypeScript und Tailwind CSS.
-Die Seite ist vollständig auf Deutsch und statisch vorgerendert.
+Built with Next.js (App Router), React, TypeScript and Tailwind CSS.
+The site content is entirely German and statically pre-rendered.
 
-## Leistungen
+## Services
 
-- Fensterreinigung
-- Terrassenarbeiten
-- Baureinigung
-- Unterhaltsreinigung
+- Fensterreinigung (window cleaning)
+- Terrassenarbeiten (terrace and outdoor area works)
+- Baureinigung (post-construction cleaning)
+- Unterhaltsreinigung (routine maintenance cleaning)
 
-## Starten
+## Getting started
 
-Voraussetzung: Node.js 18.18 oder neuer.
+Requires Node.js 18.18 or newer.
 
 ```bash
 npm install
 ```
 
-Entwicklungsserver (bindet an `APP_PORT_2`, Standard `8012`):
+Development server (binds to `APP_PORT_2`, defaults to `8012`):
 
 ```bash
 npm run dev
 ```
 
-Produktionsbuild und -start:
+Production build and start:
 
 ```bash
 npm run build
 npm start
 ```
 
-Der Server läuft anschließend unter <http://localhost:8012>.
+The server then runs at <http://localhost:8012>.
 
-## Konfiguration
+## Configuration
 
-Alle Unternehmens- und Rechtsangaben liegen zentral in `config/site.ts`
-(Adresse, Telefon, E-Mail, USt-IdNr., Geschäftsführung usw.).
+All company and legal details live in `config/site.ts` (address, phone, email,
+VAT ID, managing director, and so on).
 
-Die Anschrift, Telefonnummer und E-Mail-Adresse sind hinterlegt. Unter
-`site.legal` stehen noch **Platzhalter** für Vertretungsberechtigten,
-Registereintrag und USt-IdNr. – diese müssen vor dem Livegang ersetzt werden
-(Pflichtangaben nach § 5 DDG).
+The address, phone number and email are real data. `site.legal` still contains
+**placeholders** for the legal representative, commercial register entry and VAT
+ID - these must be replaced before going live (mandatory details under § 5 DDG).
 
-Für Anruf-Links nicht selbst `tel:` bauen: `telHref` aus `config/site.ts`
-verwenden (E.164-Format, ein Tap zum Anrufen). Für E-Mail `mailHref`.
+Do not build `tel:` links by hand: use `telHref` from `config/site.ts`
+(E.164 format, one tap to call). For email use `mailHref`.
 
-## Direkt anrufen
+The content of the four services lives in `config/services.ts`.
 
-Damit die Telefonnummer auf dem Smartphone mit einem Tap wählbar ist:
+## Calling directly
 
-- **Header:** Anrufbutton (Desktop ab `xl` mit Label, mobil als Icon-Button).
-- **Mobiler Aktionsbalken** (`components/MobileCallBar.tsx`): fest am unteren
-  Rand unterhalb von `lg`, mit „Jetzt anrufen“ und „Angebot anfragen“.
-- Telefonnummern im Footer, auf der Kontaktseite, im CTA-Block und auf der
-  Startseite sind ebenfalls verlinkt.
+So the phone number can be dialled with a single tap on a smartphone:
 
-Der Footer reserviert unterhalb von `lg` zusätzlichen Abstand, damit der feste
-Balken die Links zu Impressum und Datenschutz nicht verdeckt.
+- **Header:** a call button (desktop shows the label from `xl` up, mobile shows
+  an icon button).
+- **Mobile action bar** (`components/MobileCallBar.tsx`): fixed to the bottom
+  below `lg`, offering "Jetzt anrufen" and "Angebot anfragen".
+- Phone numbers in the footer, on the contact page, in the CTA block and on the
+  homepage are linked as well.
 
-Die Inhalte der vier Leistungen stehen in `config/services.ts`.
+Below `lg` the footer reserves extra bottom padding so the fixed bar does not
+cover the Imprint and Privacy links.
 
-## Kontaktformular
+## Contact form
 
-Das Formular (`components/ContactForm.tsx`) validiert Name, E-Mail-Format,
-Nachricht und die DSGVO-Zustimmung und enthält einen Honeypot gegen Spam.
-Es überträgt **keine Daten an einen Server**: Beim Absenden wird eine mit
-Betreff und Nachricht vorausgefüllte `mailto:`-Verbindung geöffnet.
+The form (`components/ContactForm.tsx`) validates the name, email format,
+message and GDPR consent, and includes a honeypot against spam.
+It does **not** transmit data to a server: on submit it opens a `mailto:`
+link prefilled with the subject and message.
 
-Für einen späteren serverseitigen Versand kann die Absende-Logik in
-`handleSubmit` um einen `fetch`-Aufruf ergänzt werden; die
-Datenschutzerklärung ist dann entsprechend zu erweitern.
+To move to server-side delivery later, add a `fetch` call in `handleSubmit`;
+the privacy policy then needs to be extended accordingly.
 
-## Struktur
+## Project structure
 
 ```
-app/                  Routen (Startseite, Leistungen, Über uns, Kontakt, Rechtliches)
-components/           Header, Footer, Formular, Karten, UI-Bausteine
-config/               Zentrale Angaben (site.ts) und Leistungsinhalte (services.ts)
-lib/                  schema.org-JSON-LD
+app/                  Routes (home, services, about, contact, legal pages)
+components/           Header, footer, form, cards, UI building blocks
+config/               Central settings (site.ts) and service content (services.ts)
+lib/                  schema.org JSON-LD
 ```
 
-## Marke und CI
+## Brand and CI
 
-Das offizielle Logo und die Farben stammen aus dem CI-Handbuch
-(`docs/brand/sg-blitzblank-logo-ci.jpg`, Version 5).
+The official logo and colours come from the CI manual
+(`docs/brand/sg-blitzblank-logo-ci.jpg`, version 5).
 
-- Primärfarbe: `#76C5EE` (CMYK 90 / 0 / 0 / 0)
-- Sekundärfarbe: `#434242`
-- Claim: „Gebäudemanagement“
+- Primary colour: `#76C5EE` (CMYK 90 / 0 / 0 / 0)
+- Secondary colour: `#434242`
+- Claim: "Gebäudemanagement"
 
-Alle Farben sind in `tailwind.config.ts` als `brand` (Blautöne) und `accent`
-(Graustufen um `#434242`) hinterlegt. Die Assets liegen hier:
+All colours are defined in `tailwind.config.ts` as `brand` (blues) and `accent`
+(greys around `#434242`). The assets are stored here:
 
-| Datei                                  | Verwendung                          |
-| -------------------------------------- | ----------------------------------- |
-| `public/brand/sg-blitzblank-signet.png` | Bildmarke: Header, Footer, Favicon-Quelle |
-| `public/brand/sg-blitzblank-wordmark.png` | Schriftzug mit Subline: Header      |
-| `public/brand/sg-blitzblank-logo.png`  | Vollständiges Logo für große Flächen/Print (nicht im Header – zu hoch) |
-| `app/icon.png`, `app/apple-icon.png`   | Favicons (aus dem Signet erzeugt)   |
+| File                                      | Use                                                    |
+| ----------------------------------------- | ------------------------------------------------------ |
+| `public/brand/sg-blitzblank-signet.png`   | Brand mark: header, footer, favicon source             |
+| `public/brand/sg-blitzblank-wordmark.png` | Wordmark with subline: header                          |
+| `public/brand/sg-blitzblank-logo.png`     | Full logo for large surfaces/print (not the header - too tall) |
+| `app/icon.png`, `app/apple-icon.png`      | Favicons (generated from the signet)                   |
 
-Der Header kombiniert Signet (`h-9`/`h-10`) und Wortmarke (`h-[22px]`/`h-6`);
-das vollständige Logo wäre in der Kopfzeile zu hoch. Unter `sm` wird statt der
-Wortmarke der Name als Text gezeigt.
+The header combines the signet (`h-9`/`h-10`) with the wordmark
+(`h-[22px]`/`h-6`); the full logo would be too tall for the header bar. Below
+`sm`, the name is shown as text instead of the wordmark.
 
-Die Logo-Dateien kombinieren dunkle Schrift mit hellblauen Flächen und sind
-für **helle** Hintergründe gedacht. Auf dunklen Flächen (Header-Zeile, Footer)
-wird deshalb direkt `#76C5EE` bzw. Weiß verwendet, nicht das Bildlogo.
+The logo files pair dark lettering with light-blue shapes and are intended for
+**light** backgrounds. On dark surfaces (top bar, footer) `#76C5EE` or white is
+used directly instead of the image logo.
 
-## Bilder
+## Images
 
-Die Fotos werden von Unsplash geladen (kostenlos nutzbar). Die erlaubten
-Quell-Domains sind in `next.config.mjs` hinterlegt. Für einen Produktivbetrieb
-empfiehlt es sich, eigene, lizenzierte Objektfotos einzubinden.
+Photos are loaded from Unsplash (free to use). The allowed source domains are
+configured in `next.config.mjs`. For production it is recommended to use
+licensed photos of the actual sites.
 
-## Datenschutz und Tracking
+## Privacy and tracking
 
-Es werden keine Cookies zu Analyse- oder Marketingzwecken gesetzt und keine
-Tracking-Dienste verwendet. Daher ist kein Cookie-Banner erforderlich.
+No cookies are set for analytics or marketing purposes and no tracking services
+are used. A cookie banner is therefore not required.

@@ -20,7 +20,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        /** Primärfarbe aus dem Logo/CI: CMYK 90/0/0/0 ≈ #76C5EE */
+        /** Primary CI colour: CMYK 90/0/0/0 ≈ #76C5EE */
         brand: {
           50: "#f0f9fe",
           100: "#ddf1fc",
@@ -34,7 +34,7 @@ const config: Config = {
           900: "#225674",
           950: "#16384d",
         },
-        /** Sekundärfarbe aus dem Logo/CI: #434242 */
+        /** Secondary CI colour: #434242 */
         accent: {
           50: "#f6f6f6",
           100: "#e7e7e7",

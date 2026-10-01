@@ -248,7 +248,7 @@ export default function ContactForm({
         )}
       </div>
 
-      {/* Honeypot – für Menschen unsichtbar */}
+      {/* Honeypot - invisible to humans */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="company">Firma</label>
         <input
